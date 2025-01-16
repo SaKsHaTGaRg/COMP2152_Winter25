@@ -3,21 +3,14 @@ import random
 weapons = ["Use Fist", "Knife", "Club", "Gun", "Bomb", "Nuclear Bomb"]
 print("Elements: ", weapons)
 
-def get_valid_int_input(prompt):
-    while True:
-        try:
-            return int(input(prompt))
-        except ValueError:
-            print("Error: Please enter a valid integer!")
-            continue
+
+
+# Roll dice
+weaponRoll = random.randint(1, 6)
+hero_combat_strength = weapons[weaponRoll - 1]
+
+print(f"You rolled a {weaponRoll}. Your weapon is: {hero_combat_strength}")
 try:
-    weapon_selected = get_valid_int_input("Enter the index of the weapon you'd like to fight with : ")
-    # Roll dice
-    weaponRoll = random.randint(1, 6)
-    hero_combat_strength = weapons[weaponRoll - 1]
-
-    print(f"You rolled a {weaponRoll}. Your weapon is: {hero_combat_strength}")
-
     if weaponRoll <= 2:
         print("You rolled a weak weapon, friend.")
     elif weaponRoll <= 4:
