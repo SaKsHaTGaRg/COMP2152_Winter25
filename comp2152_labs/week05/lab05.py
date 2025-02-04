@@ -2,7 +2,7 @@
 import random
 
 # Put all the functions into another file and import them
-import functions_lab05_solution
+import functions_lab05
 
 # Game Flow
 # Define two Dice
@@ -171,7 +171,7 @@ if not input_invalid:
     num_dream_lvls = input("How many dream levels do you want to go down?")
     if num_dream_lvls != 0:
         health_points -= 1
-        crazy_level = functions_lab05_solution.inception_dream(num_dream_lvls)
+        crazy_level = functions_lab05.inception_dream(num_dream_lvls)
         combat_strength += crazy_level
         print("combat strength: " + str(combat_strength))
         print("health points: " + str(health_points))
@@ -238,3 +238,4 @@ if not input_invalid:
     if not input_invalid:
         stars_display = "*" * num_stars
         # Lab 5 - Question 2:
+        print("    |  Hero " + short_name + " gets < " + stars_display + "> starts")
