@@ -1,5 +1,5 @@
 # Import the random library to use for the dice later
-import randomcd
+import random
 
 # Put all the functions into another file and import them
 import functions_lab05_starter
